@@ -7,7 +7,7 @@ import os
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("file", type=argparse.FileType("rb"), help="ROM to extract texts from")
+parser.add_argument("file", type=argparse.FileType("rb"), help="ROM to extract texts from") # rom_data
 parser.add_argument("-l", "--language", dest="lang", default="en", help="Language to load translations from")
 args = parser.parse_args()
 

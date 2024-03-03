@@ -19,9 +19,9 @@ def main(lang, rom_data, working_dir):
     for folder in os.listdir(working_dir + "/" + lang):
         for file in os.listdir(working_dir + "/" + lang + "/" + folder):
             rom_filename = folder + "/" + file[0:len(file) - 5]
-            strings = json.loads(open("%s/%s/%s/%s" % (working_dir, lang, folder, file), "rb").read())
+            strings = json.loads(open(f"{working_dir}/{lang}/{folder}/{file}", "rb").read())
 
-            print("Compiling: %s (%d)" % (rom_filename, rom.filenames[rom_filename]))
+            print(f"Compiling: {rom_filename} ({rom.filenames[rom_filename]:d})")
 
             stringBytes = []
             for i in strings:
